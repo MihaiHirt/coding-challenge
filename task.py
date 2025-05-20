@@ -44,6 +44,8 @@ with open("logs.log", "r") as file:
                     })
 
 
-for r in results:
-        print(f"{r['status']} : {r['type']} {r['id']} (PID {r['pid']}) ran for {r['duration']} seconds -- {r['duration in mins']} minutes")
+# for r in results:
+#         print(f"{r['status']} : {r['type']} {r['id']} (PID {r['pid']}) ran for {r['duration']} seconds -- {r['duration in mins']} minutes")
 
+    for r in results:
+        print(f"[{r['status']}] Job '{r['type']}' with PID {r['pid']} ran from {r['start_time'].time()} to {r['end_time'].time()} taking {r['duration']} seconds -- {r['duration in mins']} minutes.")
